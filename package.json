@@ -1,0 +1,36 @@
+{
+  "name": "chasing_the_cta",
+  "version": "0.0.1",
+  "description": "app to track the cta blue line train",
+  "main": "index.js",
+  "repository": "git@github.com:chastep/chasing_the_cta.git",
+  "author": "Chase Stephens <chasestephens92@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec yarn restart",
+    "restart": "rimraf dist && yarn build && yarn start",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3",
+    "rimraf": "^3.0.0"
+  }
+}
